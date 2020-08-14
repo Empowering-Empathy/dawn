@@ -1,0 +1,11 @@
+actions:
+- name: AddFearlessReview
+  definition:
+    kind: synchronous
+    handler: http://172.17.0.1:3001/AddFearlessReview
+custom_types:
+  enums: []
+  input_objects: []
+  objects:
+  - name: AddFearlessReviewOutput
+  scalars: []

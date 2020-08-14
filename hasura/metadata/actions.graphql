@@ -1,0 +1,14 @@
+type Mutation {
+  AddFearlessReview (
+    body: String!
+    planet_id: uuid!
+  ): AddFearlessReviewOutput
+}
+
+
+
+
+type AddFearlessReviewOutput {
+  affected_rows : Int!
+}
+
