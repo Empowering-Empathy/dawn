@@ -4,26 +4,89 @@
 .btn{
     color:white;
     margin:15px;
-    
+    border:none;
     padding:5px 20px;
     background-color:rgb(120, 120, 138);
-    border-radius:8px ;
-    
+    border-radius:8px ;   
 }
 
-.sub{
+.btn:hover{
+    border:2px solid rgba(255, 115, 0, 0.959);
+    background-color:rgb(129, 129, 158);
+}
+
+ .sub{
     margin-right:0;
     color:rgba(255, 115, 0, 0.959);
     background-color:#f7f7f7;
-    border-color: rgba(255, 115, 0, 0.959);
+    border:2px solid rgba(255, 115, 0, 0.959);
 }
 
-div >.btn{
-    font-size: 14px; 
-    display: inline;
+.sub:hover{
+    color:#f7f7f7;
+    background-color:rgba(255, 115, 0, 0.959);
+    
+}
+.info{
+    margin:10px;
 }
 
 .question{
     color:gray;
     font-size:18px;  
+}
+
+
+/* COLUMNS */
+
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+
+.col:first-of-type { margin-left: 0; }
+
+/* CLEARFIX */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+/* FORM */
+
+.form .feeling input, .form .reason input, .form .group input{
+	display: none;
+}
+
+.form .four{
+	position: relative;
+	font-size: 14px;
+	text-align: center;
+	display: block;
+    cursor: pointer;
+    color:white;
+    margin:10px;
+    padding:5px 15px;
+    background-color:rgb(120, 120, 138);
+    border-radius:8px ;  
+	border: 3px solid transparent;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.form .feeling  input:checked + label, .form .reason  input:checked + label, .form .group input:checked + label{
+	border: 3px solid #333;
+	background-color:rgba(255, 115, 0, 0.959);
 }

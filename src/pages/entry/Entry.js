@@ -7,38 +7,45 @@ export class Entry extends Component {
             <div>
                 <h2>Welcome to the New Age</h2>
                 <h2> of <span className="empathy">Empathy</span></h2>
-                <form>
+                <form className="form cf">
+                <section className="feeling cf"> 
                    <h3 className="question">How are you feeling today?</h3> 
-                   <label htmlFor="amazing"></label>
-                   <input type="button" className="btn" id="amazing" name="amazing" value="Amazing"/>
-                   <label htmlFor="good"></label>
-                   <input type="button" className="btn" id="good" name="good" value="Good"/>
-                   <label htmlFor="okay"></label>
-                   <input type="button" className="btn" id="okay" name="okay" value="Okay"/>
-                   <label htmlFor="could-be-better"></label>
-                   <input type="button" className="btn" id="could-be-better" name="could-be-better" value="Could be Better"/>
+                   <input type="radio" name="radio1" id="amazing" value="amazing"/>
+                   <label className="four col" for="amazing">Amazing</label>
+                    <input type="radio" name="radio1" id="good" value="good" />
+                    <label className="four col" for="good">Good</label>
+                    <input type="radio" name="radio1" id="okay" value="okay"/>
+                    <label className="four col" for="okay">Okay</label>
+                    <input type="radio" name="radio1" id="cbb" value="cbb"/>
+                    <label className="four col" for="cbb">Could be Better</label>
+                    </section>
+                    <section className="reason cf">
                    <h3 className="question" >Why are you here?</h3> 
-                   <label htmlFor="to-learn"></label>
-                   <input type="button" className="btn" id="to-learn" name="to-learn" value="To Learn"/>
-                   <label htmlFor="to-engage"></label>
-                   <input type="button" className="btn" id="to-engage" name="to-engage" value="To Engage"/>
-                   <label htmlFor="to-share"></label>
-                   <input type="button" className="btn" id="to-share" name="to-share" value="To Share"/>
-                   <label htmlFor="to-explore"></label>
-                   <input type="button" className="btn" id="to-explore" name="to-explore" value="To Explore"/>
-                   <h3 className="question">Your Information</h3>
-                   <label className="question">Name</label>
-                   <input type="text" name="user_name"/>
-                   <label className="question">Age</label>
-                   <input type="number" name="user_age"/>
-                   <label className="question">Job</label>
-                   <input type="text" name="user_text"/>
+                   <input type="radio" name="radio2" id="to-learn" value="to-learn" />
+                   <label className=" four col" for="to-learn">To Learn</label>
+                   <input type="radio" name="radio2" id="to-engage" value="to-engage" />
+                   <label className=" four col" for="to-engage">To Engage</label>
+                   <input type="radio" name="radio2" id="to-share" value="to-share" />
+                   <label className=" four col" for="to-share">To Share</label>
+                   <input type="radio" name="radio2" id="to-explore" value="to-explore" />
+                   <label className="four col" for="to-explore">To Explore</label>
+                   </section>
+                   <h3 className="question">Your Information*</h3>
+                   <label className="question"></label>
+                   <input type="text" name="user_name" className="info" placeholder="Name" required/>
+                   <label className="question"></label>
+                   <input type="number" className="info" name="user_age" placeholder="Age" required/>
+                   <label className="question"></label>
+                   <input type="text" name="user_text" className="info" placeholder="Job" required/>
+                   <section className="group cf">
                    <h3 className="question">Video Chat</h3>
-                   
-                   <div><Link to="/1-on-1" className="btn">1 on 1 Discussion</Link>
-                   <Link to="/small-group" className="btn">Small Group</Link></div>   
-                   
+                   <input type="radio" name="radio3" id="one" value="one" required/>
+                   <label className="four col" for="one">1-on-1 Discussion</label>
+                   <input type="radio" name="radio3" id="small-group" value="small-group" required/>
+                   <label className="four col" for="small-group">Small Group</label><br></br>
+                   </section>
                    <button type="submit" className="btn sub">Submit</button>
+                   <section/>
                 </form>
             </div>
         )
