@@ -1,0 +1,29 @@
+.empathy{
+    color:rgba(255, 115, 0, 0.959);
+}
+.btn{
+    color:white;
+    margin:15px;
+    
+    padding:5px 20px;
+    background-color:rgb(120, 120, 138);
+    border-radius:8px ;
+    
+}
+
+.sub{
+    margin-right:0;
+    color:rgba(255, 115, 0, 0.959);
+    background-color:#f7f7f7;
+    border-color: rgba(255, 115, 0, 0.959);
+}
+
+div >.btn{
+    font-size: 14px; 
+    display: inline;
+}
+
+.question{
+    color:gray;
+    font-size:18px;  
+}

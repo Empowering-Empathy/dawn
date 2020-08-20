@@ -10,8 +10,12 @@ import {
 import { getMainDefinition } from "@apollo/client/utilities";
 import { WebSocketLink } from "@apollo/link-ws";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Planet from "./pages/planet/Planet";
-import PlanetSearch from "./pages/planetSearch/PlanetSearch";
+import Entry from "./pages/entry/Entry";
+import One from "./pages/one/One";
+import SmallGroup from "./pages/smallGroup/SmallGroup";
+import Header from "./components/header/Header";
+
+
 // import Logo from "./components/shared/Logo";
 import "./index.css";
 
@@ -49,13 +53,15 @@ const App = () => (
   <BrowserRouter>
     <ApolloProvider client={client}>
       {/* <Logo /> */}
+      <Header/>
       <Switch>
-        <Route path="/planet/:id" component={Planet} />
-        <Route path="/" component={PlanetSearch} />
-        <PlanetSearch />
+        <Route exact path="/" component={Entry} />
+        <Route  path="/1-on-1" component={One} />
+        <Route  path="/small-group" component={SmallGroup} />
+        
       </Switch>
     </ApolloProvider>
-  </BrowserRouter>
+    </BrowserRouter>
 );
 
 render(<App />, document.getElementById("root"));
