@@ -56,8 +56,8 @@ const App = () => (
       <Header/>
       <Switch>
         <Route exact path="/" component={Entry} />
-        <Route  path="/1-on-1" component={One} />
-        <Route  path="/small-group" component={SmallGroup} />
+        <Route  path="/1-on-1/:roomId" component={One} />
+        <Route  path="/small-group/:roomId" component={SmallGroup} />
         
       </Switch>
     </ApolloProvider>
