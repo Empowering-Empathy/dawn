@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from "react-router";
 import "../../styles/entry.css"
 
 //import DataApiService from '../../services/data-api-service'
@@ -17,6 +18,7 @@ const query = `
 
 
 function Entry() { 
+    const history = useHistory();
   function  handleForm (event) {
         event.preventDefault();
        // const { radio1, radio2, user_name, user_age, user_position, radio3 } = event.target
@@ -30,7 +32,7 @@ function Entry() {
 
         fetch(url, opts)
         .then(res => res.json())
-        .then(console.log)
+        .then(event.target.radio3.value === "1" ? history.push('1-on-1/:roomId'): history.push('small-group/:roomId'))
         .catch(console.error);
           
             /*DataApiService.postGroupData({
@@ -50,11 +52,7 @@ function Entry() {
                     radio3.value=" "
                     
                 })
-                .catch(res => {
-                    this.setState({
-                        error: res.error
-                    })
-                })
+                
             */
     }
 

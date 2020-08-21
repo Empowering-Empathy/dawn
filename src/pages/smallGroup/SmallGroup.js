@@ -3,7 +3,7 @@ import User from '../../components/users/User'
 import { useQuery, gql } from '@apollo/client';
 
 const GET_PEOPLE = gql`
-  query getPeople {
+  query GetPeople {
     info(where: { radio3: 2 } limit: 7) {
       user_name
       user_age
@@ -11,7 +11,7 @@ const GET_PEOPLE = gql`
   }
  }`;
 export default function SmallGroup() {
-    const { loading, error, data:{getOnePair:info} } = useQuery(GET_PEOPLE);
+    const { loading, error, data:{GetPeople:info} } = useQuery(GET_PEOPLE);
   
     if (loading) {
       return <div>Loading...</div>;
